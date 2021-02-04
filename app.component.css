@@ -1,0 +1,24 @@
+/* Styling for whole body */
+#container{
+    margin: 2px;
+    border: solid 2px blue;
+}
+/* Styling for heading */
+#heading{
+    background-color: red;
+    text-align: center;
+    padding: 25px;
+    color:white ;
+}
+/* Styling for data wrap  */
+.nav-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+/* Styling for right side codes*/
+.right-side{
+    background-color: royalblue;
+    justify-content: left;
+    text-align: left;   
+}

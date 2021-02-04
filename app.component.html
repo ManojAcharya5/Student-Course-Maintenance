@@ -1,0 +1,52 @@
+<!-- Beginning of the document -->
+<div id="container">
+    <!-- Heading line -->
+    <h1 id="heading" >
+      Course & Student Maintenance
+    </h1>
+    <!-- content part -->
+    <div class="nav-wrapper">
+      <!-- Left side content -->
+    <div class=left-side>
+        <div>
+            <h3>Course</h3>
+            <br><br>
+        </div>
+        <div>
+            <h3>Students</h3>
+        </div>
+    </div>
+    <!-- right side content -->
+    <div class="right-side">
+            <div  title="Course">
+                <select (change)="changeCourses($event.target.value)">
+                    <option>--Choose Courses--</option>
+                    <option *ngFor ="let cour of allCourses">{{cour.name}} </option>
+                </select>
+  
+         <input type="text" name="newCourse" [(ngModel)]="mycour"><br>
+        <button ng-click="push()">Add</button>
+        <!--                &#10004;
+
+                &#128502; -->
+
+            </div>
+
+            <br><br>
+        <div title="Student">
+            <select placeholder="Students">
+                <option>--Choose Student--</option>
+                <option *ngFor="let Student of students">{{Student.name}} </option>
+            </select>
+        </div>
+    </div>
+</div>
+<script>
+    var mycour=angular.module("allCourses",[]);
+    mycour.controller("controller",function($scope){
+        $scope.push=function(){
+            var inputCour= $scope.allCoursesInput;
+            $scope.allCourses.push(inputCour);
+        }
+    });
+</script> 
